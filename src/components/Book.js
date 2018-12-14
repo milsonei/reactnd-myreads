@@ -12,6 +12,9 @@ class Book extends Component{
         showTag: PropTypes.bool.isRequired
     }
 
+    /**
+     * Execute the function 
+     */
     handleBookShelfChange = (shelf) => {
         this.props.onBookShelfChange({id: this.props.id, title: this.props.title, shelf: this.props.shelf}, shelf)
     }
@@ -19,8 +22,7 @@ class Book extends Component{
     render() {       
         const {title, authors, thumbnail, shelf, showTag} = this.props;
         return (
-            <li>
-                 
+            <li>                 
                 <div className="book">
                     <div className="book-top">    
                     <Badge style={{ backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }} count={shelf === 'none' || !showTag ? 0 : (<Icon style={{ color: '#52c41a' }} theme="filled" type="tag"/>)}>                   
