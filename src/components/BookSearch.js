@@ -5,6 +5,10 @@ import DialogUtil from '../utils/DialogUtil';
 import BookList from './BookList';
 import {Spin, Tooltip, Alert} from 'antd';
 const ENTER_KEY = 13;
+/**
+ * This is a component responsible for generating a book listing based on the response sent by the BooksAPI javascript API.
+ * The chosen book will be placed on a shelf after the reader's action.
+ */
 class BookSearch extends Component {
     
     state = {
@@ -171,7 +175,10 @@ class BookSearch extends Component {
             showIcon
             closable            
             />)
-        :  ( <BookList showTag={true} key="search" onBookShelfChange={this.confirmRequestBook} books={this.state.books}/>);
+        :  ( <div>
+                <label className="result-info">Search returned {this.state.books.length} books</label>
+                <BookList showTag={true} key="search" onBookShelfChange={this.confirmRequestBook} books={this.state.books}/>
+             </div>);
         return (
             <div className="search-books">
             <div className="search-books-bar">
