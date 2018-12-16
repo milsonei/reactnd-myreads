@@ -103,7 +103,7 @@ A new browser window should automatically open displaying the app. If it doesn't
 - To change a book's category or remove a book from the list, click on the green button on the book cover. 
   ![Change menu](src/images/screenshots/change-shelf.jpg "change")
 - If you remove a book from the list, you'll need to confirm the action first.
-  ![Remove book confirmation](src/images/screenshots/remove-confirmation.jpg "remove")
+  ![Remove book confirmation](src/images/screenshots/remove-confirmation-dialog.jpg "remove")
 - To add new books: 
   - Click on the green + button at the bottom of the page.
   - Enter an author's name or subject.
@@ -115,7 +115,7 @@ _Note: The backend API is limited to a fixed set of [search terms](#search-terms
 ![Search Screen](src/images/screenshots/search-book.jpg "search")
 
 - For books that have already been chosen by the reader will be shown a tag icon in the upper right corner.
-![Tag icon](src/images/screenshots/selected-book.jpg "selected book")
+![Tag icon](src/images/screenshots/book-in-shelf.jpg "selected book")
 
 ### Resources and Documentation:
 
