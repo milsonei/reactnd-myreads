@@ -177,6 +177,14 @@ search(query)
 - [React Router Documentation](http://knowbody.github.io/react-router-docs/)
 - [React Training/React Router](https://reacttraining.com/react-router/web/api/BrowserRouter)
 - [React API](https://facebook.github.io/react/docs/react-api.html)
+- [Ant Design of React Library Installation](https://ant.design/docs/react/introduce#Installation)
+- [Component antd Tooltip](https://ant.design/components/tooltip/)
+- [Component antd Alert](https://ant.design/components/alert/)
+- [Component antd Spin](https://ant.design/components/spin/)
+- [Component antd Grid](https://ant.design/components/grid/)
+- [Component antd Notification](https://ant.design/components/notification/)
+- [Component antd Icon](https://ant.design/components/icon/)
+- [Component antd Modal](https://ant.design/components/modal/)
 
 ## Udacity Resources:
 
