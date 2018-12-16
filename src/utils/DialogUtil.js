@@ -1,7 +1,8 @@
 import React from 'react';
 import { notification, Icon, Modal } from 'antd';
 /**
- * This class provides functions that show notifications and dialogs from the ANTD library
+ * This class provides functions that show notifications and dialogs from the ANTD library.
+ * The code was based on component documentation at https://ant.design/components/notification/ and https://ant.design/components/modal/
  */
 class DialogUtil {
   
