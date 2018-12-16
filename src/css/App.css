@@ -207,7 +207,8 @@ button:active {
 }
 
 .result-info{
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  font-weight: bold;
 }
 
 .book-title {
