@@ -7,6 +7,9 @@ import sortBy from 'sort-by'
  */
 import CoverImageNotAvailable from '../images/cover-image-not-available.png'
 
+/**
+ * This is a component responsible for generating a book listing, thus rendering a collection based on the component Book.
+ */
 class BookList extends Component{
     
     static propTypes = {
@@ -26,6 +29,7 @@ class BookList extends Component{
                             id={book.id} 
                             showTag={this.props.showTag}
                             title={book.title} 
+                            publisher={book.publisher}
                             authors={book.authors || []} 
                             thumbnail={(book.imageLinks && book.imageLinks.thumbnail ? book.imageLinks.thumbnail : CoverImageNotAvailable)} 
                             onBookShelfChange={this.handleBookShelfChange} 
