@@ -14,69 +14,68 @@ The project uses Node.js and the Create-React-App starter. If you do not have **
 ```bash
 ├── CONTRIBUTING.md
 ├── README.md - This file.
-├── SEARCH_TERMS.md *The whitelisted short collection of available search terms for you to use with your app.
-├── package.json *npm package manager file. It's unlikely that you'll need to modify this.
+├── SEARCH_TERMS.md #The whitelisted short collection of available search terms for you to use with your app.
+├── package.json #npm package manager file. It's unlikely that you'll need to modify this.
 ├── public
-│   ├── favicon.ico *React Icon, You may change if you wish.
-│   └── index.html *DO NOT MODIFY
+│   ├── favicon.ico #React Icon, You may change if you wish.
+│   └── index.html #DO NOT MODIFY
 └── src
     ├── components
-    │   ├── App.js *This is the root of app. Contains static HTML right now.*
-    │   ├── Book.js *This is a component responsible for rendering the cover page of the book and other information such as title, authors and cover.
-    │   │            This component presents two different types of behaviors. In the search screen result, if the book is already included in the user''s shelf, 
-    │   │            small icon is shown in the upper right corner, but in home, this icon is hidden.*
-    │   ├── BookList.js *This is a component responsible for generating a book listing, thus rendering a collection based on the component Book.
-    │   │                This component is used by the BookSearch and BookShelf components.*
-    │   ├── BooksAPI.js *A JavaScript API for the provided Udacity backend. Instructions for the methods are below.*
-    │   ├── BookSearch.js *is is a component responsible for generating a book listing based on the response sent by the BooksAPI javascript API.
-    │   │                  The book listing is managed by the BookList component.
-    │   │                  The chosen book will be placed on a shelf after the reader''s action.*
-    │   ├── BookShelf.js *This is a component responsible for generating a classified listing of books according to the type of shelf. 
-    │   │                  The types of shelf are: "Currently Reading", "Want to Read" and "Read".*
-    │   ├── BookShelfChanger.js *This is a component responsible for orchestrating the change of a particular book to another shelf, as well as permanently removing it from the reader''s shelves.
-    │   │                        The request is cascaded for each parent component, until finally it is sent remotely by the responsible API.*
-    │   ├── Home.js *This is a component responsible for generating the home page of the application. It renders the VirtualBookcase component.*
-    │   ├── Search.js *This is a component responsible for generating the application''s search page. It renders the BookSearch component.*
-    │   ├── VirtualBookcase.js *This is a component responsible for generating the reader''s book page. 
-    │   │                       This page is responsive according to screen size, and for screens larger than 796px, the shelves are arranged in columns and on smaller screens, 
-    │   │                       they are arranged in lines. 
-    │   │                       This feature is provided by the Row and Col components of the ANTD library.*
-    ├── css *Styles for app*
+    │   ├── App.js #This is the root of app. Contains static HTML right now.#
+    │   ├── Book.js #This is a component responsible for rendering the cover page of the book and other information such as title, authors and cover.
+    │   │            #This component presents two different types of behaviors. In the search screen result, if the book is already included in the user's shelf, 
+    │   │            #small icon ![icon](src/images/screenshots/icon.png "icon") is shown in the upper right corner, but in home, this icon is hidden.
+    │   ├── BookList.js #This is a component responsible for generating a book listing, thus rendering a collection based on the component Book.
+    │   │                #This component is used by the BookSearch and BookShelf components.#
+    │   ├── BooksAPI.js #A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
+    │   ├── BookSearch.js #is is a component responsible for generating a book listing based on the response sent by the BooksAPI javascript API.
+    │   │                  #The book listing is managed by the BookList component.
+    │   │                  #The chosen book will be placed on a shelf after the reader's action.
+    │   ├── BookShelf.js  #This is a component responsible for generating a classified listing of books according to the type of shelf. 
+    │   │                  #The types of shelf are: "Currently Reading", "Want to Read" and "Read".
+    │   ├── BookShelfChanger.js #This is a component responsible for orchestrating the change of a particular book to another shelf, as well as permanently removing it from the reader's shelves.
+    │   │                        #The request is cascaded for each parent component, until finally it is sent remotely by the responsible API.
+    │   ├── Home.js #This is a component responsible for generating the home page of the application. It renders the VirtualBookcase component.
+    │   ├── Search.js #This is a component responsible for generating the application's search page. It renders the BookSearch component.
+    │   ├── VirtualBookcase.js #This is a component responsible for generating the reader's book page. 
+    │   │                       #This page is responsive according to screen size, and for screens larger than 796px, the shelves are arranged in columns and on smaller screens, they are arranged in lines. 
+    │   │                       #This feature is provided by the Row and Col components of the ANTD library.
+    ├── css #Styles for app#
     │   ├── App.css
-    ├── icons *Helpful icons for app.*
+    ├── icons #Helpful icons for app.
     │   ├── add.svg
     │   ├── arrow-back.svg
     │   ├── arrow-drop-down.svg
     │   └── magnifying-glass-icon
-    ├── images *Helpful images for app. *
-    │   ├── cover-image-not-available.png *Default image for books without cover
-    │   ├── home.png *home page screenshot
-    │   ├── search01.png *first search page screenshot
-    │   └── search02.png *second search page screenshot
-    ├── utils *utilities for app
-    │   ├── BooksUtil.js *This class provides support functions for the entire application*
-    │   └── DialoUtil.js *This class provides functions that show notifications and dialogs from the ANTD library*
-    ├── App.test.js *Used for testing. Provided with Create React App.*
-    ├── index.css *Global styles. You probably won''t need to change anything here.*
-    └── index.js *You should not need to modify this file. It is used for DOM rendering only.*
+    ├── images #Helpful images for app. 
+    │   ├── cover-image-not-available.png #Default image for books without cover
+    │   ├── home.png #home page screenshot
+    │   ├── search01.png #first search page screenshot
+    │   └── search02.png #second search page screenshot
+    ├── utils #utilities for app
+    │   ├── BooksUtil.js #This class provides support functions for the entire application
+    │   └── DialoUtil.js #This class provides functions that show notifications and dialogs from the ANTD library
+    ├── App.test.js #Used for testing. Provided with Create React App.
+    ├── index.css #Global styles. You probably won't need to change anything here.
+    └── index.js #You should not need to modify this file. It is used for DOM rendering only.
 ```
 
 ###### Main dependencies
 ```bash
  └── node_modules
-      ├── **antd** (version >= 3.10.9) *Ant Design of React - React UI library antd that contains a set of high quality components and demos for building rich, interactive user interfaces. See more in [ant.design installation guide](https://ant.design/docs/react/introduce#Installation)*
+      ├── antd (version >= 3.10.9) #Ant Design of React - React UI library antd that contains a set of high quality components and demos for building rich, interactive user interfaces. See more in [ant.design installation guide](https://ant.design/docs/react/introduce#Installation)
       ├── lib
-      │   ├── tooltip *A simple text popup tip.* [see more](https://ant.design/components/tooltip/)
-      │   ├── alert *Alert component for feedback.* [see more](https://ant.design/components/alert/)
-      │   ├── spin *A spinner for displaying loading state of a page or a section.* [see more](https://ant.design/components/spin/)
-      │   ├── grid *Grids System* [see more](https://ant.design/components/grid/)
+      │   ├── tooltip #A simple text popup tip. [see more](https://ant.design/components/tooltip/)
+      │   ├── alert #Alert component for feedback. [see more](https://ant.design/components/alert/)
+      │   ├── spin #A spinner for displaying loading state of a page or a section. [see more](https://ant.design/components/spin/)
+      │   ├── grid #Grids System# [see more](https://ant.design/components/grid/)
       │   │   ├──Col
       │   │   └── Row 
-      │   ├── notification *Display a notification message globally..* [see more](https://ant.design/components/notification/)
-      │   ├── icon *Semantic vector graphics.* [see more](https://ant.design/components/icon/)
-      │   └── modal Modal dialogs.* [see more](https://ant.design/components/modal/)
-      ├── sort-by (version >= 1.2.0) *utility to create comparator functions for the native Array.sort() in both node and the browser. Allows for sorting by multiple properties.* [see more](https://www.npmjs.com/package/sort-by)
-      └── prop-types (version >= 15.6.2) *Runtime type checking for React props and similar objects.* [see more](https://www.npmjs.com/package/prop-types)
+      │   ├── notification #Display a notification message globally..# [see more](https://ant.design/components/notification/)
+      │   ├── icon #Semantic vector graphics. [see more](https://ant.design/components/icon/)
+      │   └── modal #Modal dialogs. [see more](https://ant.design/components/modal/)
+      ├── sort-by (version >= 1.2.0) #utility to create comparator functions for the native Array.sort() in both node and the browser. Allows for sorting by multiple properties. [see more](https://www.npmjs.com/package/sort-by)
+      └── prop-types (version >= 15.6.2) #Runtime type checking for React props and similar objects.# [see more](https://www.npmjs.com/package/prop-types)
 ```
 ###### Instalation
 Once Node is installed, navigate to the directory where you want to store the app
