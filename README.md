@@ -4,11 +4,19 @@
 This app was built for the Udacity React Nanodegree Program. The purpose of the project is to demonstrate understanding of the basic structure and operation of a React-based app.
 
 ## How to Load the App
-###### Hosted version
+### Hosted version
 
 You can run a responsive hosted version of the app at [milsonei.github.io/reactnd-myreads](https://milsonei.github.io/reactnd-myreads)
 
-###### Project
+### Instalation
+Once Node is installed, navigate to the directory where you want to store the app
+
+```
+git clone https://github.com/milsonei/reactnd-myreads.git
+npm install
+```
+
+### Project
 The project uses Node.js and the Create-React-App starter. If you do not have **Node >= 8.x** installed, you can download it here: [Node.js](https://nodejs.org/en/)
 
 ```bash
@@ -65,7 +73,7 @@ The project uses Node.js and the Create-React-App starter. If you do not have **
     └── index.js #You should not need to modify this file. It is used for DOM rendering only.
 ```
 
-###### Main dependencies
+### Main dependencies
 ```bash
  └── node_modules
       ├── antd (version >= 3.10.9) #Ant Design of React - React UI library antd that contains a set of high quality components and demos for building rich, interactive user interfaces. See more in https://ant.design/docs/react/introduce#Installation
@@ -83,13 +91,6 @@ The project uses Node.js and the Create-React-App starter. If you do not have **
                                       #Allows for sorting by multiple properties. see more in https://www.npmjs.com/package/sort-by
       └── prop-types (version >= 15.6.2) #Runtime type checking for React props and similar objects. see more in https://www.npmjs.com/package/prop-types
 ```
-###### Instalation
-Once Node is installed, navigate to the directory where you want to store the app
-
-```
-git clone https://github.com/milsonei/reactnd-myreads.git
-npm install
-```
 
 Once all of the dependencies have been installed you can launch the app with
 
@@ -100,50 +101,7 @@ A new browser window should automatically open displaying the app. If it doesn't
 
 ![Home Screen](src/images/screenshots/home.jpg "home screen")
 
-## Backend Server
-
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
-
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
-
-### `getAll`
-
-Method Signature:
-
-```js
-getAll()
-```
-
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
-
-### `update`
-
-Method Signature:
-
-```js
-update(book, shelf)
-```
-
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
-
-### `search`
-
-Method Signature:
-
-```js
-search(query)
-```
-
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
-
-## How to Use the App
+### How to Use the App
 
 - Books are sorted into three categories: Currently Reading, Want to Read and Read
 - The number of books on each shelf is shown in the footer
@@ -169,6 +127,49 @@ _Note: The backend API is limited to a fixed set of [search terms](#search-terms
 
 - After the book is added to the target shelf, a notification message will be displayed stating the success or failure of the action.
 ![Notification of success in choosing the book](src/images/screenshots/notification.jpg "notification")
+
+### Backend Server
+
+To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+
+* [`getAll`](#getall)
+* [`update`](#update)
+* [`search`](#search)
+
+#### `getAll`
+
+Method Signature:
+
+```js
+getAll()
+```
+
+* Returns a Promise which resolves to a JSON object containing a collection of book objects.
+* This collection represents the books currently in the bookshelves in your app.
+
+#### `update`
+
+Method Signature:
+
+```js
+update(book, shelf)
+```
+
+* book: `<Object>` containing at minimum an `id` attribute
+* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
+* Returns a Promise which resolves to a JSON object containing the response data of the POST request
+
+#### `search`
+
+Method Signature:
+
+```js
+search(query)
+```
+
+* query: `<String>`
+* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
+* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
 ### Resources and Documentation:
 
