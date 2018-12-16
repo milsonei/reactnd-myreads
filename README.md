@@ -118,7 +118,7 @@ _Note: The backend API is limited to a fixed set of [search terms](#search-terms
 ![Tag icon](src/images/screenshots/book-in-shelf.jpg "selected book")
 
 - To choose a book's from the search list, click on the green button on the book cover. 
-![Choose a book](src/images/screenshots/book-in-shelf.jpg "choose a book")
+![Choose a book](src/images/screenshots/choosing-book.jpg "choose a book")
 
 - After choosing the book to include on the target shelf, a notification message will be displayed stating the success or failure of the action.
 ![Notification of success in choosing the book](src/images/screenshots/notification.jpg "notification")
