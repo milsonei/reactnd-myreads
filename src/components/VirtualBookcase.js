@@ -36,6 +36,7 @@ class VirtualBookcase extends Component{
 
     /**
      * Get updated window heigth
+     * inspired by https://www.hawatel.com/blog/handle-window-resize-in-react/
      */
     getUpdatedWindowHeight(){
         let update_height = window.innerHeight - 200;
