@@ -112,10 +112,16 @@ A new browser window should automatically open displaying the app. If it doesn't
 
 _Note: The backend API is limited to a fixed set of [search terms](#search-terms) -- see below for valid search options_
 
-![Search Screen](src/images/screenshots/search-book.jpg "search")
+![Search Screen](src/images/screenshots/search-book-result.jpg "search")
 
 - For books that have already been chosen by the reader will be shown a tag icon in the upper right corner.
 ![Tag icon](src/images/screenshots/book-in-shelf.jpg "selected book")
+
+- To choose a book's from the search list, click on the green button on the book cover. 
+![Choose a book](src/images/screenshots/book-in-shelf.jpg "choose a book")
+
+- After choosing the book to include on the target shelf, a notification message will be displayed stating the success or failure of the action.
+![Notification of success in choosing the book](src/images/screenshots/notification.jpg "notification")
 
 ### Resources and Documentation:
 
