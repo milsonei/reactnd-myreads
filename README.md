@@ -30,7 +30,7 @@ The project uses Node.js and the Create-React-App starter. If you do not have No
     │   ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
     │   ├── BookSearch.js # is is a component responsible for generating a book listing based on the response sent by the BooksAPI javascript API.
     │   │                  # The book listing is managed by the BookList component.
-    │   │                  # The choisen book is putting a 
+    │   │                  # The chosen book will be placed on a shelf after the reader's action.
     │   ├── BookShelf.js # This is a component responsible for generating a classified listing of books according to the type of shelf. 
     │   │                 # The types of shelf are: "Currently Reading", "Want to Read" and "Read".
     │   ├── BookShelfChanger.js # This is a component responsible for orchestrating the change of a particular book to another shelf,
