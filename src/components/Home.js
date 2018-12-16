@@ -1,5 +1,9 @@
 import React from 'react';
 import VirtualBookcase from './VirtualBookcase'
+/**
+ * This is a component responsible for generating the home page of the application
+ * @param {object} props 
+ */
 function Home(props){
     return (
         <div className="list-books">
