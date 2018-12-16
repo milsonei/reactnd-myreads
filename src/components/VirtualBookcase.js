@@ -4,6 +4,11 @@ import BooksUtil from '../utils/BooksUtil';
 import DialogUtil from '../utils/DialogUtil';
 import BookShelf from './BookShelf';
 import {Spin, Col, Row} from 'antd';
+/**
+ * This is a component responsible for generating the reader's book page. 
+ * This page is responsive according to screen size, and for screens larger than 796px, the shelves are arranged in columns and on smaller screens, they are arranged in lines. 
+ * This feature is provided by the Row and Col components of the ANTD library.
+ */
 class VirtualBookcase extends Component{
     constructor(props){
         super(props);
