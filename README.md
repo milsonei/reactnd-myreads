@@ -6,7 +6,7 @@ This app was built for the Udacity React Nanodegree Program. The purpose of the 
 ## How to Load the App
 ### Hosted version
 
-You can run a responsive hosted version of the app at [milsonei.github.io/reactnd-myreads](https://milsonei.github.io/reactnd-myreads)
+You can run a responsive hosted version of the app at [milsonei-myreads.surge.sh/](https://milsonei-myreads.surge.sh/)
 
 ### Instalation
 Once Node is installed, navigate to the directory where you want to store the app
