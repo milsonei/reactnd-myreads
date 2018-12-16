@@ -1,5 +1,5 @@
 # MyReads
-## Project Purpose:
+## Project Purpose
 
 This app was built for the Udacity React Nanodegree Program. The purpose of the project is to demonstrate understanding of the basic structure and operation of a React-based app.
 
@@ -101,7 +101,7 @@ A new browser window should automatically open displaying the app. If it doesn't
 
 ![Home Screen](src/images/screenshots/home.jpg "home screen")
 
-### How to Use the App
+## How to Use the App
 
 - Books are sorted into three categories: Currently Reading, Want to Read and Read
 - The number of books on each shelf is shown in the footer
@@ -128,7 +128,7 @@ _Note: The backend API is limited to a fixed set of [search terms](#search-terms
 - After the book is added to the target shelf, a notification message will be displayed stating the success or failure of the action.
 ![Notification of success in choosing the book](src/images/screenshots/notification.jpg "notification")
 
-### Backend Server
+## Backend Server
 
 To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
 
@@ -136,7 +136,7 @@ To simplify your development process, we've provided a backend server for you to
 * [`update`](#update)
 * [`search`](#search)
 
-#### `getAll`
+### `getAll`
 
 Method Signature:
 
@@ -147,7 +147,7 @@ getAll()
 * Returns a Promise which resolves to a JSON object containing a collection of book objects.
 * This collection represents the books currently in the bookshelves in your app.
 
-#### `update`
+### `update`
 
 Method Signature:
 
@@ -159,7 +159,7 @@ update(book, shelf)
 * shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
 * Returns a Promise which resolves to a JSON object containing the response data of the POST request
 
-#### `search`
+### `search`
 
 Method Signature:
 
@@ -171,14 +171,14 @@ search(query)
 * Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
 * These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
-### Resources and Documentation:
+## Resources and Documentation:
 
 - [Create-react-app Documentation](https://github.com/facebookincubator/create-react-app)
 - [React Router Documentation](http://knowbody.github.io/react-router-docs/)
 - [React Training/React Router](https://reacttraining.com/react-router/web/api/BrowserRouter)
 - [React API](https://facebook.github.io/react/docs/react-api.html)
 
-### Udacity Resources:
+## Udacity Resources:
 
 - [Project starter template](https://github.com/udacity/reactnd-project-myreads-starter)
 - [Project Rubric](https://review.udacity.com/#!/rubrics/918/view)
