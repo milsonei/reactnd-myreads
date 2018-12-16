@@ -48,10 +48,15 @@ The project uses Node.js and the Create-React-App starter. If you do not have **
     │   ├── arrow-drop-down.svg
     │   └── magnifying-glass-icon
     ├── images #Helpful images for app. 
-    │   ├── cover-image-not-available.png #Default image for books without cover
-    │   ├── home.png #home page screenshot
-    │   ├── search01.png #first search page screenshot
-    │   └── search02.png #second search page screenshot
+    │   ├── screenshots
+    │   │   ├── book-in-shelf.jpg
+    │   │   ├── change-shelf.jpg 
+    │   │   ├── choosing-book.jpg
+    │   │   ├── home.jpg
+    │   │   ├── notification.jpg
+    │   │   ├── remove-confirmation-dialog.jpg
+    │   │   └── search-book-result.jpg
+    │   └── cover-image-not-available.png #Default image for books without cover
     ├── utils #utilities for app
     │   ├── BooksUtil.js #This class provides support functions for the entire application
     │   └── DialoUtil.js #This class provides functions that show notifications and dialogs from the ANTD library
@@ -91,10 +96,52 @@ Once all of the dependencies have been installed you can launch the app with
 ```
 npm start
 ```
-
 A new browser window should automatically open displaying the app. If it doesn't, navigate to [http://localhost:3000/](http://localhost:3000/) in your browser
 
 ![Home Screen](src/images/screenshots/home.jpg "home screen")
+
+## Backend Server
+
+To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+
+* [`getAll`](#getall)
+* [`update`](#update)
+* [`search`](#search)
+
+### `getAll`
+
+Method Signature:
+
+```js
+getAll()
+```
+
+* Returns a Promise which resolves to a JSON object containing a collection of book objects.
+* This collection represents the books currently in the bookshelves in your app.
+
+### `update`
+
+Method Signature:
+
+```js
+update(book, shelf)
+```
+
+* book: `<Object>` containing at minimum an `id` attribute
+* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
+* Returns a Promise which resolves to a JSON object containing the response data of the POST request
+
+### `search`
+
+Method Signature:
+
+```js
+search(query)
+```
+
+* query: `<String>`
+* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
+* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
 ## How to Use the App
 
