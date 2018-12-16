@@ -105,10 +105,10 @@ A new browser window should automatically open displaying the app. If it doesn't
 - If you remove a book from the list, you'll need to confirm the action first.
   ![Remove book confirmation](src/images/screenshots/remove-confirmation.jpg "remove")
 - To add new books: 
--- Click on the green + button at the bottom of the page.
--- Enter an author's name or subject.
--- Press the return key or click the search button. 
--- Up to 20 items will be returned.
+  - Click on the green + button at the bottom of the page.
+  - Enter an author's name or subject.
+  - Press the return key or click the search button. 
+  - Up to 20 items will be returned.
 
 _Note: The backend API is limited to a fixed set of [search terms](#search-terms) -- see below for valid search options_
 
