@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import BooksUtil from '../utils/BooksUtil';
-
+/**
+ * This is a component responsible for orchestrating the change of a particular book to another shelf, as well as permanently removing it from the reader's shelves. 
+ * The request is cascaded for each parent component, until finally it is sent remotely by the responsible API.
+ */
 class BookShelfChanger extends Component{
     constructor(props){
         super(props);
