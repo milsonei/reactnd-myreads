@@ -1,3 +1,6 @@
+/**
+ * This class provides support functions for the entire application
+ */
 class BooksUtil {
     /**
      * Get all shelf types
