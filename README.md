@@ -94,23 +94,29 @@ npm start
 
 A new browser window should automatically open displaying the app. If it doesn't, navigate to [http://localhost:3000/](http://localhost:3000/) in your browser
 
-![Home Screen](src/images/screenshots/home.png "home screen")
+![Home Screen](src/images/screenshots/home.jpg "home screen")
 
 ## How to Use the App
 
 - Books are sorted into three categories: Currently Reading, Want to Read and Read
 - The number of books on each shelf is shown in the footer
 - To change a book's category or remove a book from the list, click on the green button on the book cover. 
-  ![Change menu](src/images/screenshots/change-shelf.png "change")
+  ![Change menu](src/images/screenshots/change-shelf.jpg "change")
 - If you remove a book from the list, you'll need to confirm the action first.
-  ![Remove book confirmation](src/images/screenshots/remove-confirmation.png "remove")
-- To add new books, click on the green + button at the bottom of the page.
-  Enter an author's name or subject, press the return key or click the search button. 
-  Up to 20 items will be returned.
+  ![Remove book confirmation](src/images/screenshots/remove-confirmation.jpg "remove")
+- To add new books: 
+-- Click on the green + button at the bottom of the page.
+-- Enter an author's name or subject.
+-- Press the return key or click the search button. 
+-- Up to 20 items will be returned.
 
 _Note: The backend API is limited to a fixed set of [search terms](#search-terms) -- see below for valid search options_
 
-![Search Screen](src/images/screenshots/search-book.png "search")
+![Search Screen](src/images/screenshots/search-book.jpg "search")
+
+- For books that have already been chosen by the reader will be shown a tag icon in the upper right corner.
+![Tag icon](src/images/screenshots/selected-book.jpg "selected book")
+
 ### Resources and Documentation:
 
 - [Create-react-app Documentation](https://github.com/facebookincubator/create-react-app)
