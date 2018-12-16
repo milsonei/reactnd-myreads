@@ -24,7 +24,7 @@ The project uses Node.js and the Create-React-App starter. If you do not have **
     │   ├── App.js #This is the root of app. Contains static HTML right now.#
     │   ├── Book.js #This is a component responsible for rendering the cover page of the book and other information such as title, authors and cover.
     │   │            #This component presents two different types of behaviors. In the search screen result, if the book is already included in the user's shelf, 
-    │   │            #small icon ![icon](src/images/screenshots/icon.png "icon") is shown in the upper right corner, but in home, this icon is hidden.
+    │   │            #small icon is shown in the upper right corner, but in home, this icon is hidden.
     │   ├── BookList.js #This is a component responsible for generating a book listing, thus rendering a collection based on the component Book.
     │   │                #This component is used by the BookSearch and BookShelf components.#
     │   ├── BooksAPI.js #A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
@@ -63,19 +63,20 @@ The project uses Node.js and the Create-React-App starter. If you do not have **
 ###### Main dependencies
 ```bash
  └── node_modules
-      ├── antd (version >= 3.10.9) #Ant Design of React - React UI library antd that contains a set of high quality components and demos for building rich, interactive user interfaces. See more in [ant.design installation guide](https://ant.design/docs/react/introduce#Installation)
+      ├── antd (version >= 3.10.9) #Ant Design of React - React UI library antd that contains a set of high quality components and demos for building rich, interactive user interfaces. See more in https://ant.design/docs/react/introduce#Installation
       ├── lib
-      │   ├── tooltip #A simple text popup tip. [see more](https://ant.design/components/tooltip/)
-      │   ├── alert #Alert component for feedback. [see more](https://ant.design/components/alert/)
-      │   ├── spin #A spinner for displaying loading state of a page or a section. [see more](https://ant.design/components/spin/)
-      │   ├── grid #Grids System# [see more](https://ant.design/components/grid/)
+      │   ├── tooltip #A simple text popup tip. see more in https://ant.design/components/tooltip/
+      │   ├── alert #Alert component for feedback. see more in https://ant.design/components/alert/
+      │   ├── spin #A spinner for displaying loading state of a page or a section. see more in https://ant.design/components/spin/
+      │   ├── grid #Grids System. see more https://ant.design/components/grid/
       │   │   ├──Col
       │   │   └── Row 
-      │   ├── notification #Display a notification message globally..# [see more](https://ant.design/components/notification/)
-      │   ├── icon #Semantic vector graphics. [see more](https://ant.design/components/icon/)
-      │   └── modal #Modal dialogs. [see more](https://ant.design/components/modal/)
-      ├── sort-by (version >= 1.2.0) #utility to create comparator functions for the native Array.sort() in both node and the browser. Allows for sorting by multiple properties. [see more](https://www.npmjs.com/package/sort-by)
-      └── prop-types (version >= 15.6.2) #Runtime type checking for React props and similar objects.# [see more](https://www.npmjs.com/package/prop-types)
+      │   ├── notification # Display a notification message globally.. see more in https://ant.design/components/notification/
+      │   ├── icon #Semantic vector graphics. see more in https://ant.design/components/icon/
+      │   └── modal #Modal dialogs. see more in https://ant.design/components/modal/
+      ├── sort-by (version >= 1.2.0) #utility to create comparator functions for the native Array.sort() in both node and the browser.
+                                      #Allows for sorting by multiple properties. see more in https://www.npmjs.com/package/sort-by
+      └── prop-types (version >= 15.6.2) #Runtime type checking for React props and similar objects. see more in https://www.npmjs.com/package/prop-types
 ```
 ###### Instalation
 Once Node is installed, navigate to the directory where you want to store the app
@@ -98,17 +99,18 @@ A new browser window should automatically open displaying the app. If it doesn't
 ## How to Use the App
 
 - Books are sorted into three categories: Currently Reading, Want to Read and Read
-- To change a book's category or remove a book from the list, click on the green button on the book cover
+- The number of books on each shelf is shown in the footer
+- To change a book's category or remove a book from the list, click on the green button on the book cover. 
   ![Change menu](src/images/screenshots/change-shelf.png "change")
-
+- If you remove a book from the list, you'll need to confirm the action first.
+  ![Remove book confirmation](src/images/screenshots/remove-confirmation.png "remove")
 - To add new books, click on the green + button at the bottom of the page.
-  Enter an author's name or subject. Up to 20 items will be returned.
+  Enter an author's name or subject, press the return key or click the search button. 
+  Up to 20 items will be returned.
 
 _Note: The backend API is limited to a fixed set of [search terms](#search-terms) -- see below for valid search options_
 
-![Search Screen](src/images/screenshots/search01.png "search")
-
-![Search Screen](src/images/screenshots/search02.png "search")
+![Search Screen](src/images/screenshots/search-book.png "search")
 ### Resources and Documentation:
 
 - [Create-react-app Documentation](https://github.com/facebookincubator/create-react-app)
