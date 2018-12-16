@@ -78,7 +78,7 @@ npm start
 
 A new browser window should automatically open displaying the app. If it doesn't, navigate to [http://localhost:3000/](http://localhost:3000/) in your browser
 
-![Load Screen](src/images/screenshots/load-app.png "load screen")
+![Load Screen](src/images/screenshots/home.png "load screen")
 
 ## How to Use the App
 
@@ -93,7 +93,7 @@ _Note: The backend API is limited to a fixed set of [search terms](#search-terms
 
 ![Search Screen](src/images/screenshots/search01.png "search")
 
-![Search Screen](src/images/screenshots/search01.png "search")
+![Search Screen](src/images/screenshots/search02.png "search")
 ### Resources and Documentation:
 
 - [Create-react-app Documentation](https://github.com/facebookincubator/create-react-app)
