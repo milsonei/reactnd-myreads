@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import BookList from './BookList';
 import {Alert} from 'antd';
+/**
+ * This is a component responsible for generating a classified listing of books according to the type of shelf. 
+ * The types of shelf are: "Currently Reading", "Want to Read" and "Read".
+ */
 class BookShelf extends Component{
     static propTypes = {
         id: PropTypes.string.isRequired,
