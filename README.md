@@ -1,17 +1,16 @@
-# MyReads Project
+# MyReads
+## Project Purpose:
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+This app was built for the Udacity React Nanodegree Program. The purpose of the project is to demonstrate understanding of the basic structure and operation of a React-based app.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+## How to Load the App
+## Hosted version
 
-## TL;DR
+You can run a responsive hosted version of the app at [milsonei.github.io/reactnd-myreads](https://milsonei.github.io/reactnd-myreads)
 
-To get started developing right away:
+## Project
+The project uses Node.js and the Create-React-App starter. If you do not have Node >= 8.x installed, you can download it here: [Node.js](https://nodejs.org/en/)
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
-
-## What You're Getting
 ```bash
 ├── CONTRIBUTING.md
 ├── README.md - This file.
@@ -21,72 +20,97 @@ To get started developing right away:
 │   ├── favicon.ico # React Icon, You may change if you wish.
 │   └── index.html # DO NOT MODIFY
 └── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
+    ├── components
+    │   ├── App.js # This is the root of app. Contains static HTML right now.
+    │   ├── Book.js # This is a component responsible for rendering the cover page of the book and other information such as title, authors and cover.
+    │   │            # This component presents two different types of behaviors. In the search screen result, if the book is already included in the user's shelf, 
+    │   │            # a small icon is shown in the upper right corner, but in home, this icon is hidden.
+    │   ├── BookList.js # This is a component responsible for generating a book listing, thus rendering a collection based on the component Book.
+    │   │                # This component is used by the BookSearch and BookShelf components.
+    │   ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
+    │   ├── BookSearch.js # is is a component responsible for generating a book listing based on the response sent by the BooksAPI javascript API.
+    │   │                  # The book listing is managed by the BookList component.
+    │   │                  # The choisen book is putting a 
+    │   ├── BookShelf.js # This is a component responsible for generating a classified listing of books according to the type of shelf. 
+    │   │                 # The types of shelf are: "Currently Reading", "Want to Read" and "Read".
+    │   ├── BookShelfChanger.js # This is a component responsible for orchestrating the change of a particular book to another shelf,
+    │   │                       # as well as permanently removing it from the reader's shelves.
+    │   │                       # The request is cascaded for each parent component, until finally it is sent remotely by the responsible API.
+    │   ├── Home.js # This is a component responsible for generating the home page of the application. It renders the VirtualBookcase component.
+    │   ├── Search.js # This is a component responsible for generating the application's search page. It renders the BookSearch component.
+    │   ├── VirtualBookcase.js # This is a component responsible for generating the reader's book page. 
+    │   │                       # This page is responsive according to screen size, and for screens larger than 796px, the shelves are arranged in columns and on smaller screens, 
+    │   │                       # they are arranged in lines. 
+    │   │                       # This feature is provided by the Row and Col components of the ANTD library.
+    ├── css # Styles for app
+    │   ├── App.css
+    ├── icons # Helpful icons for app. 
     │   ├── add.svg
     │   ├── arrow-back.svg
-    │   └── arrow-drop-down.svg
+    │   ├── arrow-drop-down.svg
+    │   └── magnifying-glass-icon
+    ├── images # Helpful images for app. 
+    │   ├── cover-image-not-available.png # Default image for books without cover
+    │   ├── home.png # home page screenshot
+    │   ├── search01.png # first search page screenshot
+    │   └── search02.png # second search page screenshot
+    ├── utils # utilities for app
+    │   ├── BooksUtil.js # This class provides support functions for the entire application
+    │   └── DialoUtil.js # This class provides functions that show notifications and dialogs from the ANTD library 
+    ├── App.test.js # Used for testing. Provided with Create React App.
     ├── index.css # Global styles. You probably won't need to change anything here.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
+## Instalation
+Once Node is installed, navigate to the directory where you want to store the app
 
-## Backend Server
-
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
-
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
-
-### `getAll`
-
-Method Signature:
-
-```js
-getAll()
+```
+git clone https://github.com/milsonei/reactnd-myreads.git
+npm install
 ```
 
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
+Once all of the dependencies have been installed you can launch the app with
 
-### `update`
-
-Method Signature:
-
-```js
-update(book, shelf)
+```
+npm start
 ```
 
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
+A new browser window should automatically open displaying the app. If it doesn't, navigate to [http://localhost:3000/](http://localhost:3000/) in your browser
 
-### `search`
+![Load Screen](src/images/screenshots/load-app.png "load screen")
 
-Method Signature:
+## How to Use the App
 
-```js
-search(query)
-```
+- Books are sorted into three categories: Currently Reading, Want to Read and Read
+- To change a book's category or remove a book from the list, click on the green button on the book cover
+  ![Change menu](src/images/screenshots/change-shelf.png "change")
 
-* query: `<String>`
-* Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+- To add new books, click on the green + button at the bottom of the page.
+  Enter an author's name or subject. Up to 20 items will be returned.
 
-## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
+_Note: The backend API is limited to a fixed set of [search terms](#search-terms) -- see below for valid search options_
 
-## Create React App
+![Search Screen](src/images/screenshots/search01.png "search")
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+![Search Screen](src/images/screenshots/search01.png "search")
+### Resources and Documentation:
 
-## Contributing
+- [Create-react-app Documentation](https://github.com/facebookincubator/create-react-app)
+- [React Router Documentation](http://knowbody.github.io/react-router-docs/)
+- [React Training/React Router](https://reacttraining.com/react-router/web/api/BrowserRouter)
+- [React API](https://facebook.github.io/react/docs/react-api.html)
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+### Udacity Resources:
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+- [Project starter template](https://github.com/udacity/reactnd-project-myreads-starter)
+- [Project Rubric](https://review.udacity.com/#!/rubrics/918/view)
+- [Udacity CSS Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+- [Udacity HTML Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+- [Udacity JavaScript Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
+
+#### Search Terms
+
+'Android', 'Art', 'Artificial Intelligence', 'Astronomy', 'Austen', 'Baseball', 'Basketball', 'Bhagat', 'Biography', 'Brief', 'Business', 'Camus', 'Cervantes', 'Christie', 'Classics', 'Comics', 'Cook', 'Cricket', 'Cycling', 'Desai', 'Design', 'Development', 'Digital Marketing', 'Drama', 'Drawing', 'Dumas', 'Education', 'Everything', 'Fantasy', 'Film', 'Finance', 'First', 'Fitness', 'Football', 'Future', 'Games', 'Gandhi', 'History', 'History', 'Homer', 'Horror', 'Hugo', 'Ibsen', 'Journey', 'Kafka', 'King', 'Lahiri', 'Larsson', 'Learn', 'Literary Fiction', 'Make', 'Manage', 'Marquez', 'Money', 'Mystery', 'Negotiate', 'Painting', 'Philosophy', 'Photography', 'Poetry', 'Production', 'Program Javascript', 'Programming', 'React', 'Redux', 'River', 'Robotics', 'Rowling', 'Satire', 'Science Fiction', 'Shakespeare', 'Singh', 'Swimming', 'Tale', 'Thrun', 'Time', 'Tolstoy', 'Travel', 'Ultimate', 'Virtual Reality', 'Web Development', 'iOS'
+
+_This project is licensed under the terms of the MIT license._
