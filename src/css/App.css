@@ -201,8 +201,13 @@ button:active {
 }
 
 .book-title,
+.book-publisher,
 .book-authors {
   font-size: 0.8em;
+}
+
+.result-info{
+  padding-bottom: 10px;
 }
 
 .book-title {
