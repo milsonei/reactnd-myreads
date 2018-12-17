@@ -9,12 +9,9 @@ import {Spin, Col, Row} from 'antd';
  * This page is responsive according to screen size, and for screens larger than 796px, the shelves are arranged in columns and on smaller screens, they are arranged in lines. 
  * This feature is provided by the Row and Col components of the ANTD library.
  */
-class VirtualBookcase extends Component{
-    constructor(props){
-        super(props);
-        this.shelfTypes = BooksUtil.getShelfTypes();
-    }
-
+class VirtualBookcase extends Component{    
+    shelfTypes = BooksUtil.getShelfTypes();
+    
     state={   
         loading: true,
         sucess:'',
