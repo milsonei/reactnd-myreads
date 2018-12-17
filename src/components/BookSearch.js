@@ -72,7 +72,7 @@ class BookSearch extends Component {
     /**
      * Closure to solve custom filter and then to map result
      */
-    filter = books => shelf => books.filter(b => b.shelf === shelf).map(book => book.id)
+    filterAndMap = books => shelf => books.filter(b => b.shelf === shelf).map(book => book.id)
     
     /**
      * After the first render, the getAll routine from BooksAPI fetches personal books remotely stored
@@ -80,7 +80,7 @@ class BookSearch extends Component {
     async componentDidMount() {
         const books = await BooksAPI.getAll();
         
-        const filterBy = this.filter(books)
+        const filterBy = this.filterAndMap(books)
 
         const wantToRead = filterBy('wantToRead')
         const currentlyReading = filterBy('currentlyReading')
