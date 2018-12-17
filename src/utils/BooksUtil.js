@@ -27,7 +27,7 @@ class BooksUtil {
      * @param {string} shelfId The if of selected shelf
      */
     static getShelfName = (shelfId) => {
-        var shelfType = BooksUtil.getShelfTypes().find(shelf => shelf.id === shelfId);
+        const shelfType = BooksUtil.getShelfTypes().find(shelf => shelf.id === shelfId);
         if (shelfType) return shelfType.name;
         return '';
     }
