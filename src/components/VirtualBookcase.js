@@ -45,10 +45,7 @@ class VirtualBookcase extends Component{
         }
         return update_height;
     }
-    /**
-     * Shelf types
-     */
-    shelfTypes = null;
+
     /**
      * After the first render, the getAll routine from BooksAPI fetches personal books remotely stored
      */
