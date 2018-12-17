@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import PropTypes from 'prop-types'
 import BookShelfChanger from './BookShelfChanger';
 import {Badge, Icon} from 'antd';
@@ -6,7 +6,7 @@ import {Badge, Icon} from 'antd';
  * This component is responsible for rendering the cover page of the book and other information such as title, authors and cover.
  * This component presents two different types of behaviors. In the search screen result, if the book is already included in the user's shelf, a small icon is shown in the upper right corner, but in home, this icon is hidden.
  */
-class Book extends Component{
+class Book extends PureComponent{
     static propTypes = {
         id: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
