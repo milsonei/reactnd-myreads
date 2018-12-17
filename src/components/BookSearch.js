@@ -70,19 +70,30 @@ class BookSearch extends Component {
     }
 
     /**
+     * Closure to solve custom filter and then to map result
+     */
+    filter = books => shelf => books.filter(b => b.shelf === shelf).map(book => book.id)
+    
+    /**
      * After the first render, the getAll routine from BooksAPI fetches personal books remotely stored
      */
-    componentDidMount(){    
-        BooksAPI.getAll().then(books => {          
-            this.setState({
-                currentUserShelves : {
-                    currentlyReading: books.filter(book => book.shelf === 'currentlyReading').map(book => book.id),
-                    wantToRead: books.filter(book => book.shelf === 'wantToRead').map(book => book.id),
-                    read: books.filter(book => book.shelf === 'read').map(book => book.id),
-                }
-            })
-        });
+    async componentDidMount() {
+        const books = await BooksAPI.getAll();
+        
+        const filterBy = this.filter(books)
 
+        const wantToRead = filterBy('wantToRead')
+        const currentlyReading = filterBy('currentlyReading')
+        const read = filterBy('read')
+
+        this.setState({
+            currentUserShelves : {
+                currentlyReading,
+                wantToRead,
+                read,
+            }
+        })
+       
         this.focusInputSearch();
     }
 
